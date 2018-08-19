@@ -1,0 +1,19 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Arthur Oliveira",
+            "email": "aoliveira@hotmail.com.br"
+        },
+        {
+            "id": 2,
+            "name": "Camila Teixeira",
+            "email": "camila102@hotmail.com.br"
+        },
+        {
+            "id": 3,
+            "name": "Carlos Fernandes",
+            "email": "carlinhos1110@hotmail.com.br"
+        }
+    ]
+}
