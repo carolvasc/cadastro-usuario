@@ -1,5 +1,6 @@
 :root {
     --bg-dark: #1A2F3A;
+    --bg-blue: #00BFFFA1;
 
     --logo-height: 105px;
     --header-height: 105px;
@@ -85,5 +86,20 @@ footer.footer {
             "logo"
             "menu"
             "content"
+            "footer"
     }
 }
+
+@media(max-width: 870px) {
+    #btn-excluir {
+        margin-left: .1rem !important;
+        margin-top: .5rem !important;
+    }
+}
+
+/* @media(min-width: 772px) and (max-width: 870px) {
+    #btn-excluir {
+        margin-left: .1rem !important;
+        margin-top: .5rem !important;
+    }
+} */

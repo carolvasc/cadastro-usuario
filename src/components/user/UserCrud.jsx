@@ -35,12 +35,19 @@ export default class UserCrud extends React.Component {
         this.updateField = this.updateField.bind(this)
         this.load = this.load.bind(this)
         this.remove = this.remove.bind(this)
+        this.handleEnterPress = this.handleEnterPress.bind(this)
     }
 
     componentWillMount() {
         axios.get(baseUrl).then(response => {
             this.setState({ list: response.data })
         })
+    }
+
+    handleEnterPress(event) {
+        if (event.key === 'Enter') {
+            this.save()
+        }
     }
 
     clear() {
@@ -102,6 +109,7 @@ export default class UserCrud extends React.Component {
                     clear={this.clear}
                     save={this.save}
                     updateField={this.updateField}
+                    handleEnterPress={this.handleEnterPress}
                 />
                 <UserTable list={this.state.list}
                     load={this.load}
