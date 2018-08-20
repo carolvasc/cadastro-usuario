@@ -1,6 +1,6 @@
 import React from 'react'
 import Main from '../template/Main'
-import UserForm from './UserForm'
+import Userform from './Userform'
 import UserTable from './UserTable'
 import axios from 'axios'
 
@@ -104,7 +104,7 @@ export default class UserCrud extends React.Component {
     render() {
         return (
             <Main {...headerProps}>
-                <UserForm name={this.state.user.name}
+                <Userform name={this.state.user.name}
                     email={this.state.user.email}
                     clear={this.clear}
                     save={this.save}
