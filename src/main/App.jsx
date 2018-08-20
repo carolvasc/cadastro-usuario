@@ -3,6 +3,7 @@ import 'font-awesome/css/font-awesome.min.css'
 import './App.css'
 import React from 'react'
 import { HashRouter } from 'react-router-dom'
+import { NotificationContainer, NotificationManager } from 'react-notifications'
 
 import Logo from '../components/template/Logo'
 import Nav from '../components/template/Nav'
@@ -15,6 +16,7 @@ export default props =>
             <Logo />
             <Nav />
             <Routes />
+            <NotificationContainer />
             <Footer />
         </div>
     </HashRouter>

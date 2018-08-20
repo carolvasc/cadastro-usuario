@@ -4,6 +4,8 @@ import UserForm from './UserForm'
 import UserTable from './UserTable'
 import axios from 'axios'
 
+import { NotificationContainer, NotificationManager } from 'react-notifications'
+
 const headerProps = {
     icon: 'users',
     title: 'Usuários',
@@ -50,11 +52,19 @@ export default class UserCrud extends React.Component {
         const method = user.id ? 'put' : 'post'
         const url = user.id ? `${baseUrl}/${user.id}` : baseUrl
 
-        axios[method](url, user)
-            .then(response => {
-                const list = this.getUpdatedList(response.data)
-                this.setState({ user: initialState.user, list })
-            })
+        if (user.name === '' || user.email === '') {
+            NotificationManager.warning('Nome e e-mail obrigatórios', 'Preencha os campos')
+        } else {
+            axios[method](url, user)
+                .then(response => {
+                    const list = this.getUpdatedList(response.data)
+                    this.setState({ user: initialState.user, list })
+                    if (method === 'post')
+                        NotificationManager.success('Usuário criado com sucesso', 'Criar Usuário')
+                    else
+                        NotificationManager.success('Usuário alterado com sucesso', 'Editar Usuário')
+                })
+        }
 
     }
 
@@ -78,8 +88,9 @@ export default class UserCrud extends React.Component {
     remove(user) {
         axios.delete(`${baseUrl}/${user.id}`)
             .then(response => {
-                const list = this.getUpdatedList(user, false) 
+                const list = this.getUpdatedList(user, false)
                 this.setState({ list })
+                NotificationManager.success('Usuário excluído com sucesso', 'Excluir Usuário')
             })
     }
 
