@@ -13,13 +13,14 @@ export default props =>
                         autoComplete='off'
                         value={props.name}
                         onChange={e => props.updateField(e)}
+                        onKeyPress={props.handleEnterPress}
                         placeholder='Digite o nome...' />
                 </div>
             </div>
 
             <div className="col-12 col-md-6">
                 <div className="form-group">
-                    <label>Email</label>
+                    <label>E-mail</label>
                     <input type="email"
                         name="email"
                         id="email"
@@ -27,7 +28,8 @@ export default props =>
                         autoComplete='off'
                         value={props.email}
                         onChange={e => props.updateField(e)}
-                        placeholder="Digite o email..." />
+                        onKeyPress={props.handleEnterPress}
+                        placeholder="Digite o e-mail..." />
                 </div>
             </div>
         </div>

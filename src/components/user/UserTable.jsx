@@ -25,7 +25,7 @@ export default props => {
                                 <button className="btn btn-warning" title='Editar' onClick={() => props.load(user)}>
                                     <i className="fa fa-pencil"></i>
                                 </button>
-                                <button className="btn btn-danger ml-2" title='Excluir' onClick={() => props.remove(user)}>
+                                <button className="btn btn-danger ml-2" id='btn-excluir' title='Excluir' onClick={() => props.remove(user)}>
                                     <i className="fa fa-trash"></i>
                                 </button>
                             </td>
