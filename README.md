@@ -1,10 +1,17 @@
-# CRUD de Usuários
-CRUD de usuários desenvolvido com React.js e Bootstrap
+# Cadastro de Usuários
+
+<p>Um simples projeto de cadastro feito com ReactJS (CRA), Bootstrap, HTML5 e muuuito CSS3 com seu sistema de grids.</p>
 
 ## Instalação
 
-`npm install`
+* Baixar o NPM e o Node
 
-`json-server -p 3001 db.json`
+* Abrir o projeto em uma IDE de preferência ou no terminal do sistema operacional
 
-`npm start`
+  * `npm install`
+
+  * `json-server -p 3001 db.json`
+
+  * `npm start`
+  
+* Caso a aplicação rode normalmente, estará disponível em `localhost:3000`
