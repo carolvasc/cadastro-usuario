@@ -1,6 +1,6 @@
 # Cadastro de Usuários
 
-<p>Um simples projeto de cadastro feito com ReactJS (CRA), Bootstrap, HTML5 e muuuito CSS3 com seu sistema de grids.</p>
+<p>Um simples CRUD feito com React, Bootstrap, HTML5 e CSS3 com seu sistema de grids.</p>
 
 ## Instalação
 
